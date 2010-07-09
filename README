@@ -1,0 +1,5 @@
+This repository contains various useful utility functions for C.
+Source code is released under the MIT license (see COPYING).
+See include/util/*.h for documentation.
+
+David A Roberts <http://da.vidr.cc/>
