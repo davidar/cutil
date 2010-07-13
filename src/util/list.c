@@ -94,3 +94,14 @@ struct list_node *list_node_next(struct list_node *n) {
 struct list_node *list_node_prev(struct list_node *n) {
     return n->prev;
 }
+
+void list_destroy(struct list *l, int free_values) {
+    struct list_node *n, *next;
+    for(n = l->first; n; n = next) {
+        if(free_values)
+            free(n->value);
+        next = n->next;
+        list_remove(l, n);
+    }
+    free(l);
+}

@@ -52,4 +52,9 @@ struct list_node *list_node_next(struct list_node *n);
  */
 struct list_node *list_node_prev(struct list_node *n);
 
+/**
+ * Destroy the list, free()'ing remaining values if requested.
+ */
+void list_destroy(struct list *l, int free_values);
+
 #endif
